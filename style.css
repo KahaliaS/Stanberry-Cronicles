@@ -1,0 +1,446 @@
+/*This is the style sheet for the landing page aka index.html*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap');
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+:root{
+  --main-clr: peru;
+  --secondary-clr: white;
+  --nav-ft-clr:#333;
+}
+
+nav .menu-btn{
+    display: none;
+  }
+
+nav,nav a,landing,footer {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav li {
+  display: inline;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  
+}
+nav li a,nav a:link,nav a:visited {
+  
+  color: var(--secondary-clr);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav a:hover{
+  color: var(--main-clr); 
+  transition: 0.3s ease-out;
+}
+.navigation{
+  background-color: var(--nav-ft-clr);
+  
+}
+nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.2);
+  width:100%;
+  height:55px;
+  position:fixed;
+  top:0px;
+  z-index:3;
+  
+  grid-area: nav;
+  
+}
+
+
+.landing{
+  grid-area: landing;
+  background-image:url("images/landing/jamaica1.png");
+  background-repeat: no-repeat;
+  background-size:100%;
+  color:var(--secondary-clr);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.landing h2{
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+ .landing h4{
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.landing h2, .landing h4{
+  font-weight: normal;
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.case-caption {
+  grid-row: 1;
+  grid-column: 1;
+  text-align:center;
+  
+}
+.main{
+  
+  grid-area: main;
+  display:flex; 
+  justify-content:center; 
+  align-content: center;
+  margin: 3rem;
+  
+}
+.main p{
+  font-size: 20px;
+  text-align: center;
+}
+
+.stories{
+  grid-area: stories;
+}
+#nestedGrid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+.blogStories{
+    width:2fr;
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;  
+}
+
+.image_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden; 
+}
+
+footer *{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+footer{
+  grid-area: footer;
+  
+  background-color: var(--nav-ft-clr);
+  padding-bottom:3rem;
+  
+}
+
+
+.footer{
+  color: var(--secondary-clr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height:25vh;
+  padding-top: 2rem;
+  
+}
+
+.footer-heading{
+  display:flex; 
+  flex-direction: column;
+  margin-right: 4rem;
+}
+.footer-heading h4, .footer-social h4, .footer-email-form h4{
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.footer-heading a:hover, .footer-social a:hover{
+  color: var(--main-clr); 
+  transition: 0.3s ease-out;
+}
+
+.footer-social{
+  margin-right: 4rem;
+}
+
+.footer-heading a , .footer-social a{
+  color: var(--secondary-clr);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  
+}
+
+.footer-heading a{
+  font-size: 14px;
+}
+
+#footer-email{
+  width: 250px;
+  height: 28px;
+  border-radius: 4px;
+  outline: none;
+  border:none; 
+  padding-left:0.5rem;
+  font-size: 1rem;
+  margin-bottom:1rem;
+}
+
+#footer-email::placeholder{
+  color: b1b1b1;
+}
+
+#footer-email-btn{
+  width:100px; 
+  height: 28px;
+  border-radius: 4px;
+  background-color: #6B8E23;
+  outline:none; 
+  border:none;
+  color: var(--secondary-clr);
+  font-size: 1rem;
+}
+#footer-email-btn:hover{
+  cursor: pointer;
+  background-color:var(--main-clr);
+  transition: all 0.4s ease-out;
+}
+
+
+
+
+
+/*large device layout*/
+.container{
+    display:grid;
+    margin:auto;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 45px 300px 150px 300px 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "landing landing landing landing"
+    "main main main main"
+    "stories stories stories stories"
+    "footer footer footer footer";
+    /*grid-gap:5px;*/
+    
+  }
+/*medium device layout*/
+@media(min-width: 701px) and (max-width: 1200px){
+  nav .menu-btn{
+    display: none;
+  }
+
+  .container{
+    display:grid;
+    margin:auto;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 45px 270px 150px 380px 1fr;
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "landing landing landing landing landing"
+    "main main main main main"
+    "stories stories  stories stories stories"
+    "stories stories  stories stories stories"
+    "footer footer footer footer footer";
+    /*grid-gap:5px;*/
+    
+  }
+  #nestedGrid{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+   
+  }
+  .blogStories{
+    width:2fr;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+   
+  }
+
+  .footer{
+    padding-top: 2rem;
+  }
+}
+
+/*small device layout*/
+@media(max-width:700px){
+  .container{
+    display:grid;
+    margin:auto;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 45px 150px 120px 150px 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "landing landing landing landing"
+    "main main main main"
+    "stories stories stories stories"
+    "stories stories stories stories"
+    "stories stories stories stories"
+    "footer footer footer footer";
+    
+    
+  }
+
+  nav{
+
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.2);
+  width:100%;
+  height:55px;
+  position:fixed;
+  top:0px;
+  z-index:3;
+  
+}
+
+  /*Added to add hamburger to nav for small screens */
+  nav ul{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: var(--nav-ft-clr);
+    margin-top:100px;
+   
+  }
+  nav ul a{
+    display:block;
+    padding: 20px;
+  
+  }
+
+  nav .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .2s ease-out;
+  }
+  
+  nav .menu-icon{
+    
+    padding: 20px 20px;
+    position: relative;
+    cursor: pointer;
+   
+  }
+
+  nav .menu-icon .nav-icon{
+    background: var(--secondary-clr);
+    display: block;
+    height: 2px; 
+    width: 18px;
+    position: relative; 
+    transition: background .2s ease-out;
+  }
+
+  nav .menu-icon .nav-icon:before{
+    background: var(--secondary-clr); 
+    content: "";
+    display: block; 
+    height: 100%;
+    width:100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+  }
+
+  nav .menu-icon .nav-icon:after{
+    background: var(--secondary-clr); 
+    content: "";
+    display: block; 
+    height: 100%;
+    width:100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+  }
+  
+
+  nav .menu-btn{
+    display: none;
+  }
+
+  nav .menu-btn:checked ~ .menu{
+    max-height: 240px;
+  }
+
+  nav .menu-btn:checked ~ .menu-icon .nav-icon{
+    background:transparent;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top:0;
+  }
+  nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top:0;
+  }
+
+  #nestedGrid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    
+  }
+  .blogStories{
+    width:100%;
+    height:150px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 4px;
+  }
+  .main{
+    margin: 10px;
+    
+  }
+  .main p{
+  font-size: 15px;
+  
+}
+  
+  .image_img{
+  
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden; 
+  }
+  
+  #four{
+    display:none;
+  }
+  .footer{
+    height:50vh;
+  }
+
+  .footer-3{
+    display:none
+  }
+  .footer-email-form{
+    margin-top:2rem;
+  }
+ 
+}

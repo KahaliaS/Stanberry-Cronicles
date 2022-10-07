@@ -1,0 +1,272 @@
+/*Stylesheet for blog langing page. Imports template style sheet --blog-style-template.css--*/
+@import "blog-style-template.css";
+
+/*This is the page that should contain blog cards that link to blog articles*/
+
+:root{
+  /*Peru:  --main-clr    (color_prime)   */
+  --grey-clr: #e2e2e2;
+  --darker-grey-clr: #a2a2a2;
+  --white-clr: #fff;
+}
+
+
+/*Large Device */
+.stories{
+  background-color:#f2f2f2;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows:repeat(3,1fr);
+}
+/*not sure if this is neccessary*/
+.stories * {
+  box-sizing: border-box;
+  
+}
+.blog-card{
+  display:flex;
+  flex-direction: column;
+  margin: 10px; 
+  box-shadow: 0 3px 7px -1px rgba(0,0,0,.1);
+  margin-bottom: 1.6%;
+  background-color: var(--white-clr);
+  line-height: 1.4;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index:0;
+  height:300px;
+}
+.blog-card a{
+  color: inherit; 
+}
+.blog-card a:hover{
+  color: var(--main-clr);
+}
+.blog-card:hover .blog-photo{
+  transform: scale(1.3) rotate(3deg);
+}
+.blog-card .blog-card-container{
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+#blog-one-photo{
+  background-position: 25% 85%;
+  background-image: url("images/stories/travel1.jpg");
+  
+}
+#blog-two-photo{
+  background-image: url("images/stories/travel2.jpg");
+  background-position: 80% 70%;
+  
+}
+#blog-three-photo{
+ background-image: url("images/stories/travel3.jpg");
+ background-position: 80% 70%;
+}
+#blog-four-photo{
+  background-image: url("images/stories/travel4.jpg");
+}
+#blog-five-photo{
+  background-image: url("images/stories/travel5.jpg");
+}
+#blog-six-photo{
+  background-image: url("images/stories/travel6.1.jpg");
+}
+
+.blog-card .blog-photo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
+}
+.blog-card .blog-details, .blog-card .blog-details ul{
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.blog-card .blog-details{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left .2s;
+  /*Not sure why this isnt working*/
+  background-color: rgba(0,0,0, .6);
+  color: var(--white-clr);
+  padding: 10px;
+  width: 100%;
+  font-size: .9rem;
+}
+.blog-card .blog-details a{
+  text-decoration: none;
+}
+.blog-card .blog-details ul li{
+  display: inline-block;
+}
+.blog-card .blog-details .author:before{
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "\f007";
+}
+.blog-card .blog-details .date:before{
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "\f133";
+}
+.blog-card .blog-details .tags ul:before{
+   font-family: FontAwesome;
+   content: "\f02b";
+   margin-right: 10px;
+}
+.blog-card .blog-details .tags li{
+   margin-right: 2px;
+}
+.blog-card .blog-details .tags li:first-child{
+  margin-left: -4px;
+}
+.blog-card:hover .blog-details {
+	left: 0%;
+}
+.blog-card .blog-description{
+  padding: 1rem;
+  background-color: var(--white-clr); 
+  position:relative; 
+  z-index:1;
+}
+.blog-card .blog-description h1,
+    .blog-card .blog-description h2 {
+	font-family: Poppins, sans-serif;
+}
+
+.blog-card .blog-description h1 {
+	line-height: 1;
+	margin: 0;
+	font-size: 1.7rem;
+}
+
+.blog-card .blog-description h2 {
+	font-size: 1rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--darker-grey-clr);
+	margin-top: 5px;
+}
+.blog-card .blog-description .blog-read-more {
+	text-align: right;
+  
+}
+.blog-card .blog-description .blog-read-more a {
+	color: var(--main-clr);
+	display: inline-block;
+	position: relative;
+  text-decoration: none;
+}
+.blog-card .blog-description .blog-read-more a:after {
+	content: "\f061";
+	font-family: FontAwesome;
+	margin-left: -10px;
+	opacity: 0;
+	vertical-align: middle;
+	transition: margin .3s, opacity .3s;
+  
+}
+.blog-card .blog-description .blog-read-more a:hover:after {
+	margin-left: 5px;
+	opacity: 1;
+  
+}
+.blog-card p {
+	position: relative;
+	margin: 1rem 0 0;
+}
+
+.blog-card p:first-of-type {
+	margin-top: 1.25rem;
+}
+
+.blog-card p:first-of-type:before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	background-color: var(--main-clr);
+	width: 35px;
+	top: -0.75rem;
+	border-radius: 3px;
+}
+
+/*Medium Device */
+@media(min-width: 701px) and (max-width: 1200px){
+  .stories{
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows:repeat(3,1fr);
+  }
+  .blog-card{
+    margin: 1rem auto; 
+  }
+  #blog-four, #blog-five, #blog-six {
+    display:none;
+  }
+}
+
+/*Medium and Large Devices*/
+@media(min-width: 701px){
+  .blog-card {
+		flex-direction: row;
+		max-width: 700px;
+	}
+  .blog-card .blog-card-container{
+		flex-basis: 40%;
+		height: auto;
+	}
+  .blog-card .blog-description {
+		flex-basis: 60%;
+  }
+  .blog-card .blog-description:before {
+		transform: skewX(-3deg);
+		content: "";
+		background-color: var(--white-clr);
+		width: 30px;
+		position: absolute;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+  .blog-card.alt {
+		flex-direction: row-reverse;
+	}
+
+	.blog-card.alt .blog-description:before {
+		left: inherit;
+		right: -10px;
+		transform: skew(3deg);
+  }
+  .blog-card.alt .blog-details {
+		padding-left: 25px;
+	}
+}
+
+/*Small Device */
+@media(max-width:700px){
+  .stories{
+ 
+  display:grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows:repeat(1,1fr);
+  padding: 0px 5px;
+  
+}
+  .blog-card{
+    height:440px;
+  }
+  #blog-three, #blog-four, #blog-five, #blog-six {
+    display:none ;
+  }
+}

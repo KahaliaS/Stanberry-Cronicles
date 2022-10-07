@@ -1,0 +1,172 @@
+/*Template stylesheet for blog pages. Imports template style sheet --blog-style-template.css--*/
+@import "blog-style-template.css";
+/*Large Device Layout*/
+/*landing sections*/
+.landing{
+  background-repeat: no-repeat;
+  background-size:100%;
+  color:var(--secondary-clr);
+  display:flex;
+  justify-content: left;
+  align-items: center;
+  height: 300px;
+  position:relative;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+#post-one-img{
+  background-position: 25% 40%;
+  background-image:url("images/stories/travel1.jpg")
+}
+#post-two-img{
+  background-image: url("images/stories/travel2.jpg");
+  background-position: 10% 20%;
+}
+#post-three-img{
+  background-image: url("images/stories/travel3.jpg");
+  background-position: 80% 70%;
+}
+#post-four-img{
+  background-image: url("images/stories/travel4.jpg");
+  
+}
+
+.landing h2{
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  font-size: 4em;
+}
+
+ .landing h4{
+  font-size: 18px;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  padding-top:50px;
+}
+
+.landing h2, .landing h4{
+  font-weight: normal;
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.landing-container {
+  grid-row: 1;
+  grid-column: 1;
+  text-align:left; 
+  padding-left: 100px;
+  
+}
+.author-img {
+  width:120px;
+  height:120px;
+  position: absolute;
+  top: 325px;
+  margin-left: 100px;
+  border: 4px solid peru;
+  border-radius: 50%;
+}
+
+.articles, .author-info{
+  margin-right:100px;
+  margin-left:100px;
+}
+.articles{
+  margin-top: 105px;
+  height: 400px;
+  overflow: scroll;
+  border: 1px solid #ebeaea;
+}
+
+.articles p{
+  text-indent: 2.5em;
+  font-size:1.2em;
+}
+
+.author-info{
+  height:150px;
+  margin-top:5px;
+  padding-top:30px;
+  line-height: .3; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+#abt-author{
+  color:peru;
+}
+
+#author-title, #author-name{
+  font-weight: normal;
+}
+#author-title{
+  font-family: cursive;
+}
+
+#author-bio{
+    line-height: 1.6;
+  }
+
+
+
+/*Medium Device Layout*/
+@media(min-width: 701px) and (max-width: 1200px){
+  .landing-container{
+    padding-left: 60px;
+  }
+  .landing h2{
+    font-size: 3em;
+  }
+  .landing h4{
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding-top:20px;
+  }
+  .author-img {
+    width:100px;
+    height:100px;
+    margin-left: 60px;
+  }
+  .articles, .author-info{
+    margin-right:60px;
+    margin-left:60px;
+  }
+  .articles{
+   margin-top: 85px;
+  }
+  .author-info{
+    padding-top:10px;
+  }
+  
+}
+
+/*Small Device Layout*/
+@media(max-width:700px){
+  .landing{
+    height:250px;
+  }
+  .landing-container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .landing h2{
+    font-size: 2em;
+  }
+
+  .landing h4{
+    padding-top:10px;
+  }
+  .author-img {
+    width:80px;
+    height:80px;
+    margin-left: 40px;
+    
+  }
+  .articles, .author-info{
+    margin-right:40px;
+    margin-left:40px;
+  }
+  .articles{
+   margin-top: 70px;
+  }
+  
+}
