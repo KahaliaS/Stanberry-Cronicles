@@ -18,8 +18,12 @@ This project has a working home/ landing page that you can navigate to by clicki
 This project also had a working blog landing page that you can navigate to by clicking on first navigation link, located on the right hand side, and says **Blog**. 
 
 The first four articles are function and you can get to them by clicking the titles on the top post seciton or within the blog landing page clicking **Read More** under any of the four first articles. 
+ 
 
 ### Help for this project:
 - Article Card on the Blog landing page: https://codepen.io/ChynoDeluxe/pen/bdXeqQ?editors=1100
 - Navigation Help: https://youtu.be/6pidsgeLLzE
 - Footer Help: https://youtu.be/5WoQm7tR6EA
+
+### Project Page on Replit: 
+https://replit.com/@KahaliaStanberr/Blog-Project?v=1
