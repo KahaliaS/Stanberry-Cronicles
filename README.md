@@ -26,4 +26,4 @@ The first four articles are function and you can get to them by clicking the tit
 - Footer Help: https://youtu.be/5WoQm7tR6EA
 
 ### Project Page on Replit: 
-https://replit.com/@KahaliaStanberr/Blog-Project?v=1
+https://replit.com/@KahaliaStanberr/Blog-Project?v=1 
