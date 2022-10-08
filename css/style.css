@@ -35,13 +35,16 @@ html, body {
 }
 .main-img{
   grid-area: main-img;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 figure{
   margin: 1rem;
 	position: relative; 
 }
 figure img{
-  width: 100%;
+  width: 80%;
 	height: 460px;
 	object-fit: cover;
 }
