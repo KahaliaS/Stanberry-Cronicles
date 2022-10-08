@@ -77,10 +77,16 @@
   border: 1px solid #ebeaea;
 }
 
+blockquote{
+  font-size:1.2em;
+  text-align:center;
+}
+
 .articles p{
   text-indent: 2.5em;
   font-size:1.2em;
 }
+
 
 .author-info{
   height:150px;
@@ -91,20 +97,25 @@
   text-overflow: ellipsis;
   
 }
-#abt-author{
+#abt-author, blockquote{
   color:peru;
 }
 
 #author-title, #author-name{
   font-weight: normal;
 }
-#author-title{
-  font-family: cursive;
+
+#author-title span{
+  color: var(--main-clr);
 }
 
 #author-bio{
     line-height: 1.6;
   }
+
+.form-style{
+  display: inline;
+}
 
 
 

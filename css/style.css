@@ -1,5 +1,8 @@
 /*This is the style sheet for the landing page aka index.html*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap";
+@import "../css/navigation-style.css";
+@import "../css/main-landing-style.css";
+
 html, body {
   height: 100%;
   width: 100%;
@@ -9,86 +12,6 @@ html, body {
   --main-clr: peru;
   --secondary-clr: white;
   --nav-ft-clr:#333;
-}
-
-nav .menu-btn{
-    display: none;
-  }
-
-nav,nav a,landing,footer {
-  font-family: 'Montserrat', sans-serif;
-}
-
-nav li {
-  display: inline;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  
-  
-}
-nav li a,nav a:link,nav a:visited {
-  
-  color: var(--secondary-clr);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-nav a:hover{
-  color: var(--main-clr); 
-  transition: 0.3s ease-out;
-}
-.navigation{
-  background-color: var(--nav-ft-clr);
-  
-}
-nav{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.2);
-  width:100%;
-  height:55px;
-  position:fixed;
-  top:0px;
-  z-index:3;
-  
-  grid-area: nav;
-  
-}
-
-
-.landing{
-  grid-area: landing;
-  background-image:url("images/landing/jamaica1.png");
-  background-repeat: no-repeat;
-  background-size:100%;
-  color:var(--secondary-clr);
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  
-  
-}
-.landing h2{
-  letter-spacing: 1px;
-  padding-bottom: 20px;
-}
-
- .landing h4{
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-.landing h2, .landing h4{
-  font-weight: normal;
-  margin: 0;
-  text-shadow: 2px 2px 6px #000;
 }
 
 .case-caption {
@@ -110,7 +33,27 @@ nav{
   font-size: 20px;
   text-align: center;
 }
-
+.main-img{
+  grid-area: main-img;
+}
+figure{
+  margin: 1rem;
+	position: relative; 
+}
+figure img{
+  width: 100%;
+	height: 460px;
+	object-fit: cover;
+}
+figcaption {
+	background: rgba(250,250,250, .8);
+	bottom: 0;
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	padding: 1rem;
+	overflow: hidden;
+}
 .stories{
   grid-area: stories;
 }
@@ -127,6 +70,7 @@ nav{
     align-items:center;
     padding:10px;  
 }
+
 
 .image_img{
   width: 100%;
@@ -233,11 +177,12 @@ footer{
     margin:auto;
 
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 45px 300px 150px 300px 1fr;
+    grid-template-rows: 45px 300px 150px 500px 300px 1fr;
     grid-template-areas: 
     "nav nav nav nav"
     "landing landing landing landing"
     "main main main main"
+    "main-img main-img main-img main-img"
     "stories stories stories stories"
     "footer footer footer footer";
     /*grid-gap:5px;*/
@@ -254,11 +199,12 @@ footer{
     margin:auto;
 
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 45px 270px 150px 380px 1fr;
+    grid-template-rows: 45px 270px 150px 300px 200px 200px 1fr;
     grid-template-areas: 
     "nav nav nav nav nav"
     "landing landing landing landing landing"
     "main main main main main"
+    "main-img main-img main-img main-img main-img"
     "stories stories  stories stories stories"
     "stories stories  stories stories stories"
     "footer footer footer footer footer";
@@ -278,9 +224,10 @@ footer{
     justify-content:center;
     align-items:center;
     
-   
   }
-
+  figure img{
+	height: 260px;
+  }
   .footer{
     padding-top: 2rem;
   }
@@ -302,8 +249,6 @@ footer{
     "stories stories stories stories"
     "stories stories stories stories"
     "footer footer footer footer";
-    
-    
   }
 
   nav{
@@ -414,12 +359,16 @@ footer{
   }
   .main{
     margin: 10px;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .main p{
-  font-size: 15px;
-  
-}
+    font-size: 15px;
+    
+  }
+  .main-img{
+    display:none;
+  }
   
   .image_img{
   

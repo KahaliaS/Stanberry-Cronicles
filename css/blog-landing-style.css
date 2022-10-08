@@ -199,6 +199,9 @@
 	top: -0.75rem;
 	border-radius: 3px;
 }
+.form-style{
+  display: inline;
+}
 
 /*Medium Device */
 @media(min-width: 701px) and (max-width: 1200px){

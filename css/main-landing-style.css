@@ -1,0 +1,25 @@
+.landing{
+  grid-area: landing;
+  background-image:url("../images/landing/jamaica1.png");
+  background-repeat: no-repeat;
+  background-size:100%;
+  color:var(--secondary-clr);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing h2{
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+ .landing h4{
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.landing h2, .landing h4{
+  font-weight: normal;
+  margin: 0;
+  text-shadow: 2px 2px 6px #000;
+}

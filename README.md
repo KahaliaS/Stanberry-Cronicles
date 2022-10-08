@@ -26,6 +26,7 @@ The first four articles are function and you can get to them by clicking the tit
 - Navigation Help: https://youtu.be/6pidsgeLLzE
 - Footer Help: https://youtu.be/5WoQm7tR6EA
 - Search Bar Help: https://youtu.be/DonxmmWW7Tk
+- Figcaption Help: https://codepen.io/yxnely/pen/bKKyYB
 
 ### Project Page on Replit: 
 https://replit.com/@KahaliaStanberr/Blog-Project?v=1 
