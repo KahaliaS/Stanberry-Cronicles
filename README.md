@@ -28,5 +28,6 @@ The first four articles are function and you can get to them by clicking the tit
 - Search Bar Help: https://youtu.be/DonxmmWW7Tk
 - Figcaption Help: https://codepen.io/yxnely/pen/bKKyYB
 
-### Project Page on Replit: 
-https://replit.com/@KahaliaStanberr/Blog-Project?v=1 
+### Project : 
+- project: https://stanberry-cronicles.kahaliastanberr.repl.co/
+- replit cover page: https://replit.com/@KahaliaStanberr/Stanberry-Cronicles?v=1
