@@ -46,9 +46,8 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
-  
 }
+
 nav li a,nav a:link,nav a:visited {
   
   color: var(--secondary-clr);
@@ -139,7 +138,7 @@ nav{
   align-items:center;
 }
 .category-container{
-  background-image: url("images/background/palm1.jpg");
+  background-image: url("../images/background/palm1.jpg");
   background-size: 400px 400px;
   text-align: left;
   position: relative;
@@ -176,7 +175,7 @@ nav{
   align-items:center;
 }
 .top-posts-container{
-  background-image: url("images/background/ocean2.jpg");
+  background-image: url("../images/background/ocean2.jpg");
   background-size: 400px 400px;
   text-align: left;
   position: relative;

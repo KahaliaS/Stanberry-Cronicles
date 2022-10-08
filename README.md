@@ -24,6 +24,7 @@ The first four articles are function and you can get to them by clicking the tit
 - Article Card on the Blog landing page: https://codepen.io/ChynoDeluxe/pen/bdXeqQ?editors=1100
 - Navigation Help: https://youtu.be/6pidsgeLLzE
 - Footer Help: https://youtu.be/5WoQm7tR6EA
+- Search Bar Help: https://youtu.be/DonxmmWW7Tk
 
 ### Project Page on Replit: 
 https://replit.com/@KahaliaStanberr/Blog-Project?v=1 

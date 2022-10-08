@@ -1,5 +1,5 @@
 /*Stylesheet for blog langing page. Imports template style sheet --blog-style-template.css--*/
-@import "blog-style-template.css";
+@import url("../css/blog-style-template.css");
 
 /*This is the page that should contain blog cards that link to blog articles*/
 
@@ -52,26 +52,26 @@
 }
 #blog-one-photo{
   background-position: 25% 85%;
-  background-image: url("images/stories/travel1.jpg");
+  background-image: url("../images/stories/travel1.jpg");
   
 }
 #blog-two-photo{
-  background-image: url("images/stories/travel2.jpg");
+  background-image: url("../images/stories/travel2.jpg");
   background-position: 80% 70%;
   
 }
 #blog-three-photo{
- background-image: url("images/stories/travel3.jpg");
+ background-image: url("../images/stories/travel3.jpg");
  background-position: 80% 70%;
 }
 #blog-four-photo{
-  background-image: url("images/stories/travel4.jpg");
+  background-image: url("../images/stories/travel4.jpg");
 }
 #blog-five-photo{
-  background-image: url("images/stories/travel5.jpg");
+  background-image: url("../images/stories/travel5.jpg");
 }
 #blog-six-photo{
-  background-image: url("images/stories/travel6.1.jpg");
+  background-image: url("../images/stories/travel6.1.jpg");
 }
 
 .blog-card .blog-photo{

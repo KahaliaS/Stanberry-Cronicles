@@ -1,5 +1,5 @@
 /*Template stylesheet for blog pages. Imports template style sheet --blog-style-template.css--*/
-@import "blog-style-template.css";
+@import url("../css/blog-style-template.css");
 /*Large Device Layout*/
 /*landing sections*/
 .landing{
@@ -15,18 +15,18 @@
 }
 #post-one-img{
   background-position: 25% 40%;
-  background-image:url("images/stories/travel1.jpg")
+  background-image:url("../images/stories/travel1.jpg")
 }
 #post-two-img{
-  background-image: url("images/stories/travel2.jpg");
+  background-image: url("../images/stories/travel2.jpg");
   background-position: 10% 20%;
 }
 #post-three-img{
-  background-image: url("images/stories/travel3.jpg");
+  background-image: url("../images/stories/travel3.jpg");
   background-position: 80% 70%;
 }
 #post-four-img{
-  background-image: url("images/stories/travel4.jpg");
+  background-image: url("../images/stories/travel4.jpg");
   
 }
 
